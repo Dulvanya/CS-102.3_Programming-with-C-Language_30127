@@ -1,0 +1,408 @@
+ //Q1
+    //while
+    int a=0;
+
+    while(a<=100)
+    {
+        printf("%d",a);
+        a++;
+    }
+
+    printf("\n");
+
+
+    //do
+    int b=0;
+
+    do
+    {
+        printf("%d",b);
+        b++;
+
+    }
+    while (b<=100);
+    printf("\n");
+
+    //for
+    for(int c=0 ; c<=100 ; c++)
+    {
+        printf("%d",c);
+    }
+    printf("\n");
+
+    //Q2
+
+    int d=0,mark,sum=0;
+    float avg;
+
+    while(d<10)
+    {
+        printf("enter the mark");
+        scanf("%d",&mark);
+        d++;
+
+        sum=sum+mark;
+    }
+
+    avg=(float)sum/10;
+
+    printf("average is %f\n",avg);
+
+    if (avg<50)
+    {
+        printf("FAIL");
+    }
+    else
+    {
+        printf("PASS");
+    }
+
+    printf("\n");
+
+
+    //Q3
+    int f,fact=1,e;
+
+    printf("enter the number");
+    scanf("%d",&e);
+
+    for(int f=1 ; f<=e ; f++)
+    {
+        fact=fact*f;
+    }
+    printf("factorial of %d is %d",e,fact);
+
+    printf("\n");
+
+    //Q4
+    int g=0,h,i;
+
+    printf("enter a number");
+    scanf("%d",&i);
+
+    for(int h=1 ; h<=i ; h++)
+    {
+       g=g+h;
+    }
+    printf("sum of the all digits = %d",g);
+
+    printf("\n");
+
+    //Q5
+
+    int j,k,l,n=0;
+
+    printf("enter a number");
+    scanf("%d",&j);
+
+    k=j;
+    do
+    {
+        l=j%10;
+        n=n*10+l;
+        j=j/10;
+    }
+    while(j>0);
+
+    printf("the reverse number of %d is %d",k,n);
+
+    //Q6
+    int base,exp;
+    double result=1.0;
+
+    printf("enter a base number");
+    scanf("%d",&base);
+
+    printf("enter the exponent");
+    scanf("%d",&exp);
+
+    while(exp!=0)
+    {
+        result*=base;
+        exp--;
+    }
+    printf("answer = %.lf",result);
+
+    printf("\n");
+
+    //Q7
+    int n1,n2,nxt,p=10;
+
+    printf("fibonacci series");
+
+    for(int x=1 ; x<=p ; x++)
+    {
+        printf("%d",n1);
+        nxt=n1+n2;
+        n1=n2;
+        n2=nxt;
+    }
+
+    printf("\n");
+
+    //Q8
+    int number,y,rem,r=0;
+
+    printf("enter a 3 digit integer");
+    scanf("%d",&number);
+    y=number;
+
+    while(y!=0)
+    {
+        rem=y%10;
+        r+=rem*rem*rem;
+        y/=10;
+    }
+
+    if(r==number)
+       {
+            printf("%d is an armstrong number",number);
+       }
+       else
+       {
+           printf("%d is not an amstrong number",number);
+       }
+
+       printf("\n");
+
+       //Q9
+       char L,z;
+
+       printf("ASCII values for all letters in lowercase");
+
+       for(L='a' ; L<=z ; L++ )
+       {
+           printf("%C:%d",L,L);
+       }
+
+       printf ("ASCII values for all letters in uppercase");
+
+       for (L='A' ; L<=z ; L++)
+       {
+           printf("%C:%d",L,L);
+       }
+
+       printf("\n");
+
+       int A,I;
+
+       for (I=1 ; I<=5 ; I++)
+       {
+           for(A=1 ; A<=I ; A++)
+           {
+               printf("*");
+           }
+           printf("\n");
+       }
+//Q10
+int main()
+{
+    int i,a;
+    for(i=1;i<=5;i++)
+    {
+        for(a=1;a<=i;a++)
+        {
+          printf("*");
+        }
+        printf("\n");
+    }
+}
+
+//Q11
+ int a, i, b = 0;
+  printf("Enter a number: ");
+  scanf("%d", &a);
+
+  for (i=1; i<=a; i++)
+  {
+      if(a%i==0)
+      {
+         b++;
+      }
+  }
+
+  if (b==2)
+  {
+        printf("%d is a Prime number",a);
+  }
+  else
+  {
+         printf("%d is not a Prime number",a);
+  }
+
+//Q12
+int n,i;
+    printf("Enter a positive integer: ");
+    scanf("%d",&n);
+    printf("Factors of %d are: ",n);
+    for(i=1;i<=n;i++)
+    {
+        if(n%i == 0)
+        {
+            printf("%d ",i);
+        }
+    }
+    
+//Q13
+int a[10],i;
+    printf("Enter 10 numbers:\n");
+
+    for (i=0;i<10;i++)
+    {
+        printf("Enter number: ");
+        scanf("%d",&a[i]);
+    }
+
+    printf("\nThe array is:\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("%d ", a[i]);
+    }
+
+    printf("\n");
+
+//Q14
+ int a[10],i,count=0;
+    printf("Enter 10 numbers:\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("Enter number: ");
+        scanf("%d", &a[i]);
+    }
+
+    for (i=0; i < 10; i++)
+    {
+        if (a[i] % 2 == 0)
+        {
+            count++;
+        }
+    }
+
+    printf("The count of even numbers in the array is: %d\n", count);
+
+Section B
+
+Q1)
+#include <stdio.h>
+int main()
+{
+    int num[10],i;
+    int p=0, n=0, z=0;
+
+    printf("Enter 10 numbers:\n");
+
+    for(i = 0; i < 10; i++)
+    {
+        printf("Enter number: ");
+        scanf("%d",&num[i]);
+    }
+
+    for(i = 0; i < 10; i++)
+    {
+        if(num[i] > 0)
+        {
+            p++;
+        }
+        else if(num[i] < 0)
+        {
+            n++;
+        }
+        else
+        {
+            z++;
+        }
+    }
+
+    printf("Number of positive numbers: %d\n", p);
+    printf("Number of negative numbers: %d\n", n);
+    printf("Number of zeros: %d\n", z);
+
+    return 0;
+}
+
+
+Q2)
+#include <stdio.h>
+int main()
+{
+    int marks[10],i,sum=0,max,min;
+    float avg;
+    printf("Enter marks for 10 students:\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("Enter marks for student : ");
+        scanf("%d", &marks[i]);
+        sum += marks[i];
+
+        if (i == 0)
+        {
+            max = marks[i];
+            min = marks[i];
+        }
+        else
+        {
+            if (marks[i] > max)
+            {
+                max = marks[i];
+            }
+            if (marks[i] < min)
+            {
+                min = marks[i];
+            }
+        }
+    }
+
+    avg=(float)sum / 10;
+
+    printf("Maximum Mark: %d\n",max);
+    printf("Minimum Mark: %d\n",min);
+    printf("Average Mark: %.2f\n",avg);
+
+    return 0;
+}
+
+
+
+Q3)
+#include <stdio.h>
+int main()
+{
+    float prices[10],sum=0,avg;
+    int count=0,i;
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("Enter price for an item : ");
+        scanf("%f",&prices[i]);
+        sum += prices[i];
+
+        if(prices[i] > 200)
+        {
+            count++;
+        }
+    }
+
+    avg=(float)sum/10;
+
+    printf("\nAverage value of an item: %.2f\n", avg);
+    printf("\nNumber of items with price greater than 200: %d\n", count);
+
+    return 0;
+}
+
+
+Q4)
+
+
+
+
+
+
+
+
+
+    return 0;
+}

@@ -1,0 +1,189 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+   //Q1
+   int n1,n2;
+
+   printf("enter two numbers");
+   scanf("%d %d",&n1,&n2);
+
+   if(n1>n2)
+   {
+       printf("highest %d\n",n1);
+   }
+   else
+   {
+       printf("highest %d\n",n2);
+   }
+
+
+   printf("\n");
+
+
+   //Q2
+
+   int n3,n4,n5;
+   printf("enter 3 no.s");
+   scanf("%d %d %d",&n3,&n4,&n5);
+   printf("\n");
+
+   if(n3>n4 && n5>n4)
+   {
+       printf("smallest %d\n",n4);
+   }
+   else if (n4>n5 && n3>n5)
+   {
+       printf("smallest %d\n",n5);
+   }
+
+   else
+   {
+       printf("smallest %d\n",n3);
+   }
+
+   printf("\n");
+
+   if (n3<n4 && n5<n4)
+   {
+       printf("highest %d",n4);
+   }
+   else if (n4<n5 && n3<n5)
+   {
+       printf("highest %d",n5);
+   }
+   else
+   {
+       printf("highest %d",n3);
+   }
+
+   printf("\n\n");
+
+   //Q3
+
+   char name[20];
+   int bs,ns,inc;
+
+   printf("enter the name");
+   scanf("%s",&name);
+
+   printf("enter the basic salary ");
+   scanf("%d",&bs);
+
+   printf("\n");
+
+   if (bs<5000)
+   {
+       inc=bs/100*5;
+   }
+   else if (bs>=5000 && bs<10000)
+   {
+       inc=bs/100*10;
+   }
+   else if (bs>=10000)
+   {
+       inc=bs/100*15;
+   }
+
+   ns=bs+inc;
+
+  printf("employee name - %s\n",name);
+  printf("new salary is Rs.%d/=\n",ns);
+
+  printf("\n");
+
+  //Q4
+
+  int rad;
+  float dia,cir,area,pie=3.14159;
+
+  printf("enter the radius");
+  scanf("%d",&rad);
+  printf("\n");
+
+  dia=(float)rad*2;
+  cir=(float)2*pie*rad;
+  area=(float)pie*rad*rad;
+
+  printf("diameter = %.2f\n",dia);
+  printf("circumference = %.2f\n",cir);
+  printf("area = %.2f\n",area);
+
+  printf("\n");
+
+  int n6,n7;
+
+  printf("enter two integers");
+  scanf("%d %d",&n6,&n7);
+  printf("\n");
+
+  if (n6%n7==0)
+  {
+      printf("%d is a multiple of %d\n",n6,n7);
+  }
+  else
+  {
+      printf("%d is not a multiple of %d\n",n6,n7);
+  }
+
+  //Q7
+
+  int basics,seryrs,monsales,working;
+  float bonus,gross;
+
+
+  printf("enter the basic salary");
+  scanf("%d",&basics);
+
+  printf("enter the no. of service years");
+  scanf("%d",&seryrs);
+
+  printf("enter 1 if the working area is colombo");
+  scanf("%d",&working);
+
+  if (seryrs>=5 )
+  {
+      basics=basics/100*10;
+  }
+
+  if(working==1)
+  {
+      basics=basics+2500;
+  }
+
+  printf("enter the monthly sales");
+  scanf("%d",&monsales);
+
+  if(monsales<25000)
+  {
+    bonus=(float)monsales/100*10;
+  }
+  else if (monsales>=25000 && monsales<50000)
+  {
+      bonus=(float)monsales/100*12;
+  }
+  else if (monsales>=50000)
+  {
+      bonus=(float)monsales/100*15;
+  }
+
+  gross=(float)basics+bonus;
+
+  printf("the gross monthly remuneration is %.2f",gross);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}

@@ -1,0 +1,163 @@
+ #include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //Q1
+   int n1;
+
+   printf("enter a number");
+   scanf("%d",&n1);
+
+   if (n1%2==0)
+   {
+       printf("even");
+   }
+   else
+   {
+       printf("odd");
+   }
+
+   printf("\n");
+
+
+   int n2;
+
+   printf("enter a number");
+   scanf("%d",&n2);
+
+   switch(n2%2==0)
+   {
+       case 1:printf("odd");
+       break;
+       case 0:printf("even");
+       break;
+       default:printf("enter a valid number\n");
+   }
+
+   printf("\n");
+
+   //Q2
+
+    int x,y;
+    char op;
+
+    printf("enter the operator");
+    scanf("%c",&op);
+
+    printf("enter two numbers");
+    scanf("%d",&x);
+    scanf("%d",&y);
+
+    switch(op)
+    {
+        case '+':printf("addition = %d",x+y);
+        break;
+        case '-':printf("substraction = %d",x-y);
+        break;
+        case '*':printf("multiplication = %d",x*y);
+        break;
+        case '/':printf("devision = %d",x/y);
+    }
+
+    printf("\n");
+
+    //Q3
+    int area,cir,vol,raduis;
+    char select;
+    float pie=22/7;
+
+    printf("choose what to calculate\n");
+    printf(" circumference of the circle\n");
+    printf(" area of a circle\n");
+    printf(" volume of a sphere");
+    scanf("%s",&select);
+
+    printf("enter the raduis");
+    scanf("%d",&raduis);
+
+    switch(select)
+    {
+        case 'c':printf("circumference is %d",cir=2*pie*raduis);
+        break;
+        case 'a':printf("area is %d",pie*raduis*raduis);
+        break;
+        case 'v':printf("volume is %d",4/3*pie*raduis*raduis*raduis);
+        break;
+        default:printf("enter a valid calculation");
+
+    }
+
+    printf("\n");
+
+    //Q5
+
+    char vowel;
+
+    printf("enter a letter");
+    scanf("%c",&vowel);
+
+    switch(vowel)
+    {
+       case 'a':printf("vowel");
+       break;
+       case 'i':printf("vowel");
+       break;
+       case 'o':printf("vowel");
+       break;
+       case 'u':printf("vowel");
+       break;
+       case 'e':printf("vowel");
+       break;
+       default:printf("not a vowel");
+    }
+
+    printf("\n");
+
+    //Q5
+
+     int num;
+
+    printf("enter the number of the month");
+    scanf("%d",&num);
+
+    switch(num)
+    {
+
+    case 1: printf("January - 31 days");
+    break;
+    case 2: printf("February - 28 days");
+    break;
+    case 3: printf("March - 31 days");
+    break;
+    case 4: printf("April - 30 days");
+    break;
+    case 5: printf("May - 31 days");
+    break;
+    case 6: printf("June - 30 days");
+    break;
+    case 7: printf("July - 31 days");
+    break;
+    case 8: printf("August - 31 days");
+    break;
+    case 9: printf("September - 30 days");
+    break;
+    case 10:printf("Octomber - 31 days");
+    break;
+    case 11:printf("November - 30 days");
+    break;
+    case 12:printf("December - 31 days");
+    break;
+    default:printf("enter a valid number");
+    }
+
+
+
+
+
+
+
+
+
+    return 0;
+}
